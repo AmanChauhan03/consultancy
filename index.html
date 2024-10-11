@@ -36,7 +36,7 @@
             padding-top: 60px;
         }
 
-        #navbar, #phone-menu,#consultancy-news {
+        #navbar, #phone-menu,#careers,#services {
             background-color: #001F3F;
             color: #EAD8B1;
         }
@@ -46,11 +46,11 @@
         #home-content{
             margin-top: 10vh;
         }
-        #team, .custom-bg-div2, #careers,#about-us{
+        #team, .custom-bg-div2, #about-us,#consultancy-news{
             background-color: #3a6d8c;
             color: white;
         }
-        .custom-bg-div, #services{
+        .custom-bg-div{
             background-color: #6a9ab0;
             color: white;
         }
@@ -101,7 +101,24 @@
             border-radius: 50%;
             object-fit: cover;
         }
-        
+        .one-about{
+            margin-bottom: 2vw;
+        }
+        .four-about{
+            margin-top: 2vw;
+        }
+        .iframe-yt{
+            width: 100%;
+            height: 400px;
+        }
+        .saba-about{
+            margin-top: 3vw;
+            line-height: 20px;
+        }
+        .last-img{
+            margin-top: 3vw;
+        }
+      
         @media (max-width: 600px)   {
             #home-content{
                 line-height: 10vw;
@@ -146,7 +163,37 @@
                 align-items: center;
                 justify-content: center;
             }
-              
+            #iframe-yt-div{
+                margin-top: 4vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+            #h2-news{
+                text-align: center;
+                font-size: 5vw;
+                line-height: 9vw;
+            }
+          
+        }
+        @media (min-width: 601px) and (max-width: 1299px) {
+            #iframe-yt-div{
+                left: 0;
+                top: 0;
+                transform: translate( 50%);
+                width: 50%;
+                margin-top: 2vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            
+            }
+            #h2-news{
+                line-height: 5vw;
+                text-align: center;
+            }
         }
         @media (min-width: 1300px) {
             #home-content{
@@ -168,6 +215,21 @@
                 font-size: 5vw;
                 
             }
+            #iframe-yt-div{
+                left: 0;
+                top: 0;
+                transform: translate( 50%);
+                width: 50%;
+                margin-top: 2vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            
+            }
+            #h2-news{
+                line-height: 4vw;
+            }
             
         }
          
@@ -183,11 +245,12 @@
             <div class="flex items-center justify-between gap-10">
                 <div id="menu" class="hidden lg:flex items-center gap-10 px-16 " >
                     <a href="#home" class="active  text-lg hover:text-white ">Home</a>
-                    <a href="#team" class=" text-lg hover:text-white ">Team</a>
+                    <a href="#about-us" class=" text-lg hover:text-white ">About</a>
                     <a href="#services" class=" text-lg hover:text-white ">Services</a>
+                    <a href="#team" class=" text-lg hover:text-white ">Team</a>
                     <a href="#careers" class=" text-lg hover:text-white ">Careers</a>
                     <a href="#consultancy-news" class=" text-lg hover:text-white ">News</a>
-                    <a href="#about-us" class=" text-lg hover:text-white ">About</a>
+                    
                 </div>
                 <button class=" flex items-center justify-end">
                     <svg id="hamburgerIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white  lg:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -224,7 +287,7 @@
         <!-- Content Container -->
         <div id="home-content" class="absolute z-0 max-w-screen-lg mx-auto text-center flex flex-col items-center px-4">
             <h1 class="home-color text-white animate-float font-bold">Welcome</h1>
-            <h3 class="home-color text-white animate-float  font-bold"">to</h3>
+            <h3 class="home-color text-white animate-float  font-bold">to</h3>
             <h3 class="home-color text-white animate-float   font-bold">
                 All Aces Consultancy
             </h3>
@@ -241,23 +304,32 @@
             <img id="home2-animation" src="images/homeimg.jpg" alt="Background Image" class="w-full h-full object-cover bg-cover">
         </div>
     </section>
-
-    <section id="team" class="px-4 md:px-8 lg:px-16 min-h-screen">
+<!-- about -->
+    <section id="about-us" class="py-16 px-4 md:px-8 lg:px-16 min-h-screen">
         <div class="max-w-6xl mx-auto mt-28">
-            <h2 id="animation-top" class="text-4xl animate-float md:text-5xl font-bold mb-20 text-center">Our Team</h2>
-            <div id="animation2" class=" team grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 grid-flow-row place-content-center gap-8">
-                <!-- Team Member 1 -->
-                <div id="team-member-1-div" class="custom-bg-div rounded-lg shadow-md p-6 flex flex-col items-center justify-center hover:shadow-lg hover:scale-105 transition-all duration-300">
-                    <img id="team-member-1" src="images/team1.jpg" alt="Team Member 1" class="w-20 h-20 sm:w-20 sm:h-20 rounded-full mb-4 object-cover">
-                    <h3 id="saba" class="text-xl font-semibold mb-2">Saba Rizvi</h3>
-                    <p  id="saba" class=" mb-2">Founder-Director</p>
-                    <p class="text-gray-500 text-sm text-center">Graduated from Boston, Clark University, USA and has been a part of the political consulting industry since its inception.</p>
+            <h2 id="animation-top" class="text-4xl animate-float md:text-5xl font-bold mb-16 text-center">About Us</h2>
+            <p id="animation1" class="one-about text-lg  mb-6"> We are the only Political Consultancy with Successfull campaigns internationally 
+                In various countries from Presidential to Prime ministerial candidates and Parties.</p>
+            <div id="animation1" class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div class="flex flex-col gap-4">
+                    
+
+                    <p class="text-lg mb-6"> We constitute a dynamic team of India’s exceptionally innovative professionals. Our past work includes a robust track record of building highly successful organizations, driving large-scale campaigns and extensive initiatives in the remotest parts of India, and resolving formidable challenges and complex issues. Presently, we stand as one of the fastest-growing startups in India.</p>
+                    <p class="text-lg mb-6">The team has evolved into a platform for young professionals aspiring to engage closely with elected representatives and decision-makers, actively participating in the governance of the country. We are driven by our core purpose to ignite impactful societal change by drawing attention towards issues and problems that concern them the most.</p>
+                    <p class="text-lg mb-6"> Indian elections are essentially a grassroots exercise and while we strive to modernize political campaigns, we recognise the strategic value of traditional methods. Our campaigns are a composite blend of both techniques thereby making them more people-centric. Each day, our team diligently crafts strategies for some of the most prominent figures in Indian politics. For us, every moment is ShowTime.     </p>
+                   
                 </div>
-                
+                <div class="mb-8 md:mb-0">
+                    <img src="images/aboutimg.jpg" alt="About All Aces Consultancy" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+               
             </div>
+            <p id="animation-top" class=" four-about text-lg"> Indian elections are essentially a grassroots exercise and while we strive to modernize political campaigns, we recognise the strategic value of traditional methods. Our campaigns are a composite blend of both techniques thereby making them more people-centric. Each day, our team diligently crafts strategies for some of the most prominent figures in Indian politics. For us, every moment is ShowTime.     </p>
+
         </div>
     </section>
 
+    <!-- services -->
     <section id="services" class="py-16 px-4 md:px-8 lg:px-16 min-h-screen">
         <div class="max-w-6xl mx-auto mt-28">
             <h2 id="animation-top" class="text-4xl animate-float md:text-5xl font-bold mb-20 text-center">Our Services</h2>
@@ -299,6 +371,28 @@
         </div>
     </section>
 
+    <!-- team -->
+    <section id="team" class="px-4 md:px-8 lg:px-16 min-h-screen">
+        <div class="max-w-6xl mx-auto mt-28">
+            <h2 id="animation-top" class="text-4xl animate-float md:text-5xl font-bold mb-20 text-center">Our Team</h2>
+            <div id="animation2" class=" team grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 grid-flow-row place-content-center gap-8">
+                <!-- Team Member 1 -->
+                <div id="team-member-1-div" class="custom-bg-div rounded-lg shadow-md p-6 flex flex-col items-center justify-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <img id="team-member-1" src="images/team1.jpg" alt="Team Member 1" class="w-20 h-20 sm:w-20 sm:h-20 rounded-full mb-4 object-cover">
+                    <h3 id="saba" class="text-xl font-semibold mb-2">Saba Rizvi</h3>
+                    <p  id="saba" class=" mb-2">Founder-Director</p>
+                    <p class="text-gray-500 text-sm text-center">Graduated from Boston, Clark University, USA and has been a part of the political consulting industry since its inception.</p>
+                    <p class="saba-about text-gray-500 text-sm text-center">A Data Scientist with expertise in Strategy and implementation using Scientific data and information.
+                        An amalgamation of Ai and Hi with Proven success across the Globe.
+                        An expert in using innovative methods and usage of latest technology for optimum results.</p>
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- careers -->
     <section id="careers" class="py-16 px-4 md:px-8 lg:px-16 min-h-screen">
         <div class="max-w-6xl mx-auto mt-28">
             <h2 id="animation-top" class="text-4xl animate-float md:text-5xl font-bold mb-10 text-center">Careers</h2>
@@ -345,6 +439,7 @@
         </div>
     </section>
 
+    <!-- news -->
     <section id="consultancy-news" class="py-16 px-4 md:px-8 lg:px-16 min-h-screen">
         <div class="max-w-6xl mx-auto mt-28">
             <h2 id="animation-top" class="text-4xl animate-float md:text-5xl font-bold mb-10 text-center">News</h2>
@@ -364,39 +459,61 @@
 
                 </div>
                 <!-- News Item 3 -->
-                <div class="custom-bg-div2  rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="images/newsimg.jpg" alt="News 3" class="w-full h-52 object-fill rounded-lg bg-center">
-
-                </div>
-
-                <div class="custom-bg-div2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <iframe class="rounded-lg w-full h-52 object-fill rounded-lg bg-center" src="https://www.youtube.com/embed/RCxlvgwJBIY" title="Jammu Kashmir Election Results 2024: Congress-NC की बड़ी जीत, Hindu उम्मीदवारों का क्या हाल?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h4 class="text-xl font-semibold mb-4 text-center text-white">Jammu Kashmir Election Results 2024</h4>
-
-                </div>
+                
+               
             </div>
-           
-        </div>
-    </section>
+            <div id="iframe-yt-div" class="custom-bg-div2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <iframe class=" iframe-yt object-fill rounded-lg bg-center" src="https://www.youtube.com/embed/RCxlvgwJBIY" title="Jammu Kashmir Election Results 2024: Congress-NC की बड़ी जीत, Hindu उम्मीदवारों का क्या हाल?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h4 class="text-xl font-semibold mb-4 text-center text-white">Jammu Kashmir Election Results 2024</h4>
+            </div>
+            <style>
+               
+            </style>
+            <div class="flex items-center justify-center mt-8 font-bold text-4xl gap-3">
+                <h2 id="h2-news">Our ongoing International campaign - Ghana Presidential Elections <span class="flex items-center justify-center mt-3">due November 2024</span> </h2>
 
-    <section id="about-us" class="py-16 px-4 md:px-8 lg:px-16 min-h-screen">
-        <div class="max-w-6xl mx-auto mt-28">
-            <h2 id="animation-top" class="text-4xl animate-float md:text-5xl font-bold mb-16 text-center">About Us</h2>
-            <div id="animation1" class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                <div class="flex flex-col gap-4">
-                    <p class="text-lg mb-6"> We constitute a dynamic team of India’s exceptionally innovative professionals. Our past work includes a robust track record of building highly successful organizations, driving large-scale campaigns and extensive initiatives in the remotest parts of India, and resolving formidable challenges and complex issues. Presently, we stand as one of the fastest-growing startups in India.</p>
-                    <p class="text-lg mb-6">The team has evolved into a platform for young professionals aspiring to engage closely with elected representatives and decision-makers, actively participating in the governance of the country. We are driven by our core purpose to ignite impactful societal change by drawing attention towards issues and problems that concern them the most.</p>
-                    <p class="text-lg mb-6"> Indian elections are essentially a grassroots exercise and while we strive to modernize political campaigns, we recognise the strategic value of traditional methods. Our campaigns are a composite blend of both techniques thereby making them more people-centric. Each day, our team diligently crafts strategies for some of the most prominent figures in Indian politics. For us, every moment is ShowTime.     </p>
-                   
+            </div>
+            <div id="animation1" class="last-img grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+               
+                <div class="custom-bg-div2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="images/newsimg6.jpeg" alt="News 2" class="w-full h-52 object-fill rounded-lg bg-center">
+
                 </div>
-                <div class="mb-8 md:mb-0">
-                    <img src="images/aboutimg.jpg" alt="About All Aces Consultancy" class="w-full h-auto rounded-lg shadow-lg">
+                <style>
+                    #newsimg4{
+                        width: 100%;
+                        height: 100%;
+                    }
+                </style>
+                <div class="custom-bg-div2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img id="newsimg4" src="images/newsimg4.jpeg" alt="News 2" class="w-full h-52 object-fill rounded-lg bg-center">
+
+                </div>
+                <div class="custom-bg-div2  rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                   
+                    <img src="images/newsimg.jpg" alt="News 1" class="w-full h-52 bg-center object-fill rounded-lg mb-6">
+
+                </div>
+                <style>
+                   
+                </style>
+
+                <style>
+                    #newsimg5{
+                        width: 100%;
+                        height: 100%;
+                    }
+                </style>
+                <div class="custom-bg-div2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img id="newsimg5" src="images/newsimg5.jpeg" alt="News 2" class="w-full h-52 object-fill rounded-lg bg-center">
+
                 </div>
                
             </div>
         </div>
     </section>
 
+    <!-- footer -->
     <footer class=" text-white py-5">
         <div class="max-w-6xl mx-auto px-4 md:px-8 lg:px-16">
             <div class="flex flex-col items-center justify-between md:flex-row ">
