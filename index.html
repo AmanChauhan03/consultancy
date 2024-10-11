@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./src/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+   <style>
+        body{
+            background-color: #001F3F;
+            overflow-x: hidden;
+        }
+        nav a.active {
+            color: white;
+            text-shadow: 0 0 10px rgba(58, 59, 61, 0.5);
+            border-bottom: 2px solid #1E40AF;
+        }
+
+        nav a:hover {
+            color: white;
+            text-shadow: 0 0 10px rgba(29, 29, 30, 0.5);
+            border-bottom: 2px solid #1E40AF;
+        }
+
+        h2{
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            text-decoration-color: #EAD8B1;
+        }
+
+        #team{
+            margin-top: 100px;
+            padding-top: 60px;
+        }
+
+        #navbar, #phone-menu,#consultancy-news {
+            background-color: #001F3F;
+            color: #EAD8B1;
+        }
+        p{
+            color: #EAD8B1;
+        }
+        #home-content{
+            margin-top: 10vh;
+        }
+        #team, .custom-bg-div2, #careers,#about-us{
+            background-color: #3a6d8c;
+            color: white;
+        }
+        .custom-bg-div, #services{
+            background-color: #6a9ab0;
+            color: white;
+        }
+
+        #home h1{
+            font-size: 5vw;
+           
+            text-shadow:  20px 30px 20px #001F3F;
+        }
+        
+        #home h3{
+            font-size: 5vw;
+            line-height: 3vw;
+            margin-bottom: 2vw;
+            text-shadow:  20px 20px 20px #3a6d8c;
+           
+        }
+        h4{
+            color: #001F3F;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            text-decoration-color: #EAD8B1;
+        }
+        #saba{
+            color: white;
+            text-decoration: underline;
+            text-underline-offset: 7px;
+            text-decoration-color: #EAD8B1;
+        }
+        #home2{
+            background-color: #001F3F;
+        }
+        #team-member-1-div{
+            left: 0;
+            top: 0;
+            transform: translateX(50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+        }
+        #team-member-1{
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        @media (max-width: 600px)   {
+            #home-content{
+                line-height: 10vw;
+                margin-top: 10vh;
+            }
+            h1{
+                font-size: 5vw;
+                margin-bottom: 10px;
+            }
+            h3:nth-child(2){
+                font-size: 5vw;
+                margin-top: 5px;
+            }
+            #home img{
+                height: 100vh;
+            }
+            #team-member-1-div{
+                margin-bottom: 10vw;
+            }
+            #team-member-1{
+                display: flex;
+                align-items: center;
+                justify-items: center;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            #team-member-1-div{
+                top: 0;
+                left: 0;
+                transform: translateX(15%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80%;
+            }
+           
+            #footer-logo{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+              
+        }
+        @media (min-width: 1300px) {
+            #home-content{
+                /* background-color: red; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 40vh;
+            }
+            #home-content h1{
+                
+                margin-top: 2vw;
+            }
+            h3{
+                /* background-color: #EAD8B1; */
+                line-height: 4vw;
+                margin-top: 1vw;
+                font-size: 5vw;
+                
+            }
+            
+        }
+         
+   </style>
+</head>
+<body>
+    <nav class="">
+        <div id="navbar" class="fixed top-0 left-0 z-50 w-full flex items-center justify-between px-10 py-4">
+            <div class="flex items-center justify-center gap-2">
+                <img src="images/logo.jpg" alt="logo" class="w-36 h-10 rounded-lg">
+                <!-- <h1 class="text-2xl font-bold text-white">All Aces Consultancy</h1> -->
+            </div>
+            <div class="flex items-center justify-between gap-10">
+                <div id="menu" class="hidden lg:flex items-center gap-10 px-16 " >
+                    <a href="#home" class="active  text-lg hover:text-white ">Home</a>
+                    <a href="#team" class=" text-lg hover:text-white ">Team</a>
+                    <a href="#services" class=" text-lg hover:text-white ">Services</a>
+                    <a href="#careers" class=" text-lg hover:text-white ">Careers</a>
+                    <a href="#consultancy-news" class=" text-lg hover:text-white ">News</a>
+                    <a href="#about-us" class=" text-lg hover:text-white ">About</a>
+                </div>
+                <button class=" flex items-center justify-end">
+                    <svg id="hamburgerIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white  lg:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white lg:hidden hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="">
+            
+            <div  id="phone-menu" class="fixed left-0 top-10 z-10 h-full w-64 bg-blue-500 transform -translate-x-full transition-transform duration-300 flex flex-col px-10 justify-start gap-4 py-4">
+            
+              <a href="#home" class="text-white text-lg hover:bg-blue-800 hover:shadow-lg">Home</a>
+              <a href="#team" class="text-white text-lg hover:bg-blue-800 hover:shadow-lg">Team</a>
+              <a href="#services" class="text-white text-lg hover:bg-blue-800 hover:shadow-lg">Services</a>
+              <a href="#careers" class="text-white text-lg hover:bg-blue-800 hover:shadow-lg">Careers</a>
+              <a href="#consultancy-news" class="text-white text-lg hover:bg-blue-800 hover:shadow-lg">News</a>
+              <a href="#about-us" class="text-white text-lg hover:bg-blue-800 hover:shadow-lg">About</a>
+              <button id="close-menu" class="text-white py-2 mt-4 border border-white rounded-md bg-blue-950 hover:bg-blue-800 hover:scale-105">Close</button>
+            </div>
+        </div>
+    </nav>
+ 
+    <!-- home section -->
+    <section id="home" class="w-full h-screen mt-16 relative flex flex-col py-8 items-center justify-center">
+        
+        <div class="relative inset-0 w-full h-full">
+            <img src="images/politicalbg.jpg" alt="Background Image" class="w-full h-full object-cover filter blur-sm">
+        </div>
+
+        <!-- Content Container -->
+        <div id="home-content" class="absolute z-0 max-w-screen-lg mx-auto text-center flex flex-col items-center px-4">
+            <h1 class="home-color text-white animate-float font-bold">Welcome</h1>
+            <h3 class="home-color text-white animate-float  font-bold"">to</h3>
+            <h3 class="home-color text-white animate-float   font-bold">
+                All Aces Consultancy
+            </h3>
+            <p id="animate-text" class="home-color animate-float text-sm sm:text-base md:text-lg lg:text-2xl font-semibold text-white max-w-lg mx-auto">
+                Empowering youth with the right skills and knowledge to make a difference in the political landscape.
+            </p>
+        </div>
+       
+       
+    </section>
+
+    <section id="home2" class="min-h-screen relative flex items-center justify-center py-12">
+        <div class="relative inset-0 w-full h-full">
+            <img id="home2-animation" src="images/homeimg.jpg" alt="Background Image" class="w-full h-full object-cover bg-cover">
+        </div>
+    </section>
+
+    <section id="team" class="px-4 md:px-8 lg:px-16 min-h-screen">
+        <div class="max-w-6xl mx-auto mt-28">
+            <h2 id="animation-top" class="text-4xl animate-float md:text-5xl font-bold mb-20 text-center">Our Team</h2>
+            <div id="animation2" class=" team grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 grid-flow-row place-content-center gap-8">
+                <!-- Team Member 1 -->
+                <div id="team-member-1-div" class="custom-bg-div rounded-lg shadow-md p-6 flex flex-col items-center justify-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <img id="team-member-1" src="images/team1.jpg" alt="Team Member 1" class="w-20 h-20 sm:w-20 sm:h-20 rounded-full mb-4 object-cover">
+                    <h3 id="saba" class="text-xl font-semibold mb-2">Saba Rizvi</h3>
+                    <p  id="saba" class=" mb-2">Founder-Director</p>
+                    <p class="text-gray-500 text-sm text-center">Graduated from Boston, Clark University, USA and has been a part of the political consulting industry since its inception.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 px-4 md:px-8 lg:px-16 min-h-screen">
+        <div class="max-w-6xl mx-auto mt-28">
+            <h2 id="animation-top" class="text-4xl animate-float md:text-5xl font-bold mb-20 text-center">Our Services</h2>
+            <div id="animation2" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="custom-bg-div2 bg-white rounded-lg shadow-md p-6 flex flex-col items-center justify-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-semibold mb-4">Political Party Transformation</h3>
+                    <p class="mb-10">Guiding political parties through strategic transformation to adapt, grow, and thrive in evolving political landscapes.</p>
+                </div>
+                <!-- Service 2 -->
+                
+                <div class="custom-bg-div2 bg-white rounded-lg shadow-md p-6 flex flex-col items-center justify-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-semibold mb-4">Campaign Management</h3>
+                    <p class="mb-10">Comprehensive campaign management services, from strategy development to execution, ensuring impactful and results-driven political campaigns.</p>
+                </div>
+
+                <div class="custom-bg-div2 bg-white rounded-lg shadow-md p-6 flex flex-col items-center justify-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-semibold mb-4">Political Communication</h3>
+                    <p class="mb-10">Crafting and delivering effective political messaging to engage, inform, and influence target audiences across multiple platforms.</p>
+                </div>
+
+                <div class="custom-bg-div2 bg-white rounded-lg shadow-md p-6 flex flex-col items-center justify-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-semibold mb-4">Technical Strategys</h3>
+                    <p class="mb-10">Developing and implementing cutting-edge technical strategies to optimize political operations, data analysis, and digital engagement.</p>
+                </div>
+
+                <div class="custom-bg-div2 bg-white rounded-lg shadow-md p-6 flex flex-col items-center justify-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-semibold mb-4">Research and Analysis</h3>
+                    <p class="mb-10">Providing in-depth research and analysis to inform data-driven decision-making and strategic political insights.</p>
+                </div>
+
+                <div class="custom-bg-div2 bg-white rounded-lg shadow-md p-6 flex flex-col items-center justify-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-semibold mb-4">strategy and Implementation</h3>
+                    <p class="mb-10">Designing tailored political strategies and overseeing their seamless implementation to achieve campaign objectives and long-term goals.</p>
+                </div>
+
+                <!-- Additional Services -->
+            </div>
+        </div>
+    </section>
+
+    <section id="careers" class="py-16 px-4 md:px-8 lg:px-16 min-h-screen">
+        <div class="max-w-6xl mx-auto mt-28">
+            <h2 id="animation-top" class="text-4xl animate-float md:text-5xl font-bold mb-10 text-center">Careers</h2>
+            <p id="animation-top" class="text-lg mb-16 text-center">We're always looking for talented individuals to join our growing team.</p>
+            <div id="animation1" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Career Item 1 -->
+                <div class="custom-bg-div rounded-lg p-6 hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-semibold mb-4">Political Research and Insights</h3>
+                    <p class="mb-4">Join our development team and work on cutting-edge projects.</p>
+                </div>
+                <div class="custom-bg-div rounded-lg p-6 hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-semibold mb-4">Media</h3>
+                    <p class="mb-4">Help create intuitive and beautiful user experiences.</p>
+                </div>
+                <div class="custom-bg-div rounded-lg p-6 hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-semibold mb-4">CREATIVE DESIGN AND VIDEO</h3>
+                    <p class="mb-4">Lead teams and ensure successful project delivery.</p>
+                </div>
+                <div class="custom-bg-div rounded-lg p-6 hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-semibold mb-4">LINGUISTICS AND COMMUNICATION</h3>
+                    <p class="mb-4">Linguistics and Communication: Enhancing political messaging through strategic language and effective communication techniques.</p>
+                </div>
+                <div class="custom-bg-div rounded-lg p-6 hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-semibold mb-4">Digital</h3>
+                    <p class="mb-4">Empowering digital transformation to optimize political outreach and engagement across platforms.</p>
+                </div>
+                <div class="custom-bg-div rounded-lg p-6 hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-semibold mb-4">Technology</h3>
+                    <p class="mb-4">Leveraging technology to enhance political campaigns and governance.</p>
+                </div>
+                <div class="custom-bg-div rounded-lg p-6 hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-semibold mb-4">Admin and Operations</h3>
+                    <p class="mb-4">Streamlining administrative and operational processes for efficient and effective political campaign management.</p>
+                </div>
+                <div class="custom-bg-div rounded-lg p-6 hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-semibold mb-4">Human Resources</h3>
+                    <p class="mb-4">Expertise in human resources management and development for political campaigns.</p>
+                </div>
+                <div class="custom-bg-div rounded-lg p-6 hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-semibold mb-4"> & Many more...</h3>
+                    <p class="mb-4">We are always looking for talented individuals to join our growing team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="consultancy-news" class="py-16 px-4 md:px-8 lg:px-16 min-h-screen">
+        <div class="max-w-6xl mx-auto mt-28">
+            <h2 id="animation-top" class="text-4xl animate-float md:text-5xl font-bold mb-10 text-center">News</h2>
+            <p id="animation-top" class="text-lg mb-16 text-center">Stay updated with the latest news and insights from All Aces Consultancy.</p>
+            <div id="animation1" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- News Item 1 -->
+                <div class="custom-bg-div2  rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                   
+                    <img src="images/newsimg2.jpg" alt="News 1" class="w-full h-52 bg-center object-fill rounded-lg mb-6">
+                    <h4 class="text-xl font-semibold mb-4 text-center text-white">Muslim population seats in Maharashtra</h4>
+
+                </div>
+                <!-- News Item 2 -->
+                <div class="custom-bg-div2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="images/newsimg3.jpg" alt="News 2" class="w-full h-52 object-fill rounded-lg bg-center">
+                    <h4 class="text-xl font-semibold mb-4 text-center text-white">2024 Maharashtra Lok Sabha Results</h4>
+
+                </div>
+                <!-- News Item 3 -->
+                <div class="custom-bg-div2  rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="images/newsimg.jpg" alt="News 3" class="w-full h-52 object-fill rounded-lg bg-center">
+
+                </div>
+
+                <div class="custom-bg-div2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <iframe class="rounded-lg" width="100%" height="90%" src="https://www.youtube.com/embed/RCxlvgwJBIY" title="Jammu Kashmir Election Results 2024: Congress-NC की बड़ी जीत, Hindu उम्मीदवारों का क्या हाल?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h4 class="text-xl font-semibold mb-4 text-center text-white">Jammu Kashmir Election Results 2024</h4>
+
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+    <section id="about-us" class="py-16 px-4 md:px-8 lg:px-16 min-h-screen">
+        <div class="max-w-6xl mx-auto mt-28">
+            <h2 id="animation-top" class="text-4xl animate-float md:text-5xl font-bold mb-16 text-center">About Us</h2>
+            <div id="animation1" class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div class="flex flex-col gap-4">
+                    <p class="text-lg mb-6"> We constitute a dynamic team of India’s exceptionally innovative professionals. Our past work includes a robust track record of building highly successful organizations, driving large-scale campaigns and extensive initiatives in the remotest parts of India, and resolving formidable challenges and complex issues. Presently, we stand as one of the fastest-growing startups in India.</p>
+                    <p class="text-lg mb-6">The team has evolved into a platform for young professionals aspiring to engage closely with elected representatives and decision-makers, actively participating in the governance of the country. We are driven by our core purpose to ignite impactful societal change by drawing attention towards issues and problems that concern them the most.</p>
+                    <p class="text-lg mb-6"> Indian elections are essentially a grassroots exercise and while we strive to modernize political campaigns, we recognise the strategic value of traditional methods. Our campaigns are a composite blend of both techniques thereby making them more people-centric. Each day, our team diligently crafts strategies for some of the most prominent figures in Indian politics. For us, every moment is ShowTime.     </p>
+                   
+                </div>
+                <div class="mb-8 md:mb-0">
+                    <img src="images/aboutimg.jpg" alt="About All Aces Consultancy" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <footer class=" text-white py-5">
+        <div class="max-w-6xl mx-auto px-4 md:px-8 lg:px-16">
+            <div class="flex flex-col items-center justify-between md:flex-row ">
+                <div id="footer-logo" class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">All Aces Consultancy</h3>
+                    <p class="mt-2">Empowering businesses with cutting-edge solutions</p>
+                </div>
+                <div class="flex flex-col items-center justify-center md:items-end">
+                    <p class="mb-4">Regd. Office: Unit No. 134 & 146,<br>
+                    1st Floor, Andheri Industrial Sstate,<br> Plot No. 22, Veera Desai Road,<br>Andheri West, Mumbai - 400053,<br> Maharashtra, India</p>
+                    <div id="contact-info" class=" flex flex-col items-center justify-between gap-2 mr-2">
+                        
+                        <p class="text-white"><i class="fas fa-phone "></i><span class="text-white">Contact: </span> 1800 258 8103, </p>
+                        <p class="text-white"><i class="fas fa-envelope "></i><span class="text-white ">Email: </span>info@allacesconsultancy.com</p>
+                    </div>   
+                   
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <p>&copy; 2024 All Aces Consultancy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./src/script.js"></script>
+</body>
+</html>
